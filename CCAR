@@ -1,10 +1,14 @@
-//
-// main.cpp
-// OOP_DEMO_CAR
-//
-// Created by wpfang on 2021/3/8.
-// Copyright © 2021 wpfang. All rights reserved.
-//
+/**
+ * 先設置一個class private 不可繼承 protected可繼承 public可繼承可更改
+ *給燈和輪子有數值
+ *然後如果在main有用到
+ *就會跑出來
+ *ccar（）是建構子
+ *有～的是執行後消失
+ *author １０９２０６３陳芸慧yunhe0603 
+ *version 1.0
+ *since 2021-3-12
+ */
 #include <iostream>
 #include <string>
 using namespace std;
@@ -44,6 +48,12 @@ cout << "car's turn" << endl;
 }
 };
 //--------------------------
+/**
+ * 這是地２個class
+ * 他繼承了上面ccar
+ * 然後修改了一些數值
+ * @return nothig
+ */
 class CBMW : public CCAR {
 public:
 CBMW() { light = 4; wheel = 4; cout << "bmw's constructor" << endl; }
@@ -60,6 +70,9 @@ CCAR::start();//scope operator
 }
 };
 //--------------------------
+/**
+ * 執行上面的副程式 
+ */
 int main(int argc, const char * argv[]) {
 CBMW bmw;
 // bmw.light=3;
